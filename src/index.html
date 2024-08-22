@@ -38,22 +38,23 @@
 
         function typeText(text, index = 0) {
           if (index < text.length) {
-            h1.insertBefore(document.createTextNode(text[index]), cursor);
+            div.insertBefore(document.createTextNode(text[index]), cursor);
             setTimeout(() => typeText(text, index + 1), 100 + index * 10);
           }
         }
 
         const main = document.querySelector("main");
 
-        const h1 = document.querySelector("h1");
-        const span = h1.querySelector("span");
+        const section = document.querySelector("section");
+        const div = section.querySelector("div");
+        const span = div.querySelector("span");
         const originalText = span.textContent;
 
         span.textContent = "";
-        span.style.display = "inline-flex";
+
         main.classList.remove("opacity-0");
 
-        h1.appendChild(cursor);
+        div.appendChild(cursor);
 
         setTimeout(() => typeText(originalText), 600);
       });
@@ -62,12 +63,14 @@
 
   <body class="bg-slate-100">
     <main class="opacity-0 duration-1000 transition-all w-[21rem]">
-      <h1 class="text-2xl font-semibold mb-2">
-        Hello, world. <span class="invisible inline-flex">I’m Tim Feeley.</span>
-      </h1>
-      <section class="flex gap-3 items-center">
-        <a class="button bg-white" href="mailto:tim@timfeeley.com"
-          >tim@timfeeley.com
+      <section
+        class="text-2xl font-semibold mb-2 flex flex-col sm:flex-row sm:gap-x-2">
+        <h1>Hello, world.</h1>
+        <div><span class="invisible inline-flex">I’m Tim Feeley.</span></div>
+      </section>
+      <section class="flex gap-3 items-center my-4">
+        <a class="button bg-white" href="mailto:tim@timfeeley.com">
+          tim@timfeeley.com
         </a>
         <a
           href="https://linkedin.com/in/timfeeley"
@@ -82,7 +85,7 @@
           <img src="github.svg" alt="GitHub" class="size-6 p-0" />
         </a>
       </section>
-      <p class="mt-4 text-xs text-slate-600">Make better mistakes tomorrow.</p>
+      <p class="text-xs text-slate-600">Make better mistakes tomorrow.</p>
     </main>
   </body>
 </html>
