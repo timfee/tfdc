@@ -13,13 +13,5 @@ node_modules/
 parcel-bundle-reports/
 tmp
 
-/target/
 
 .DS_Store
-npm-debug.log*
-package-lock.json
-sourcemap-info.json
-yarn-debug.log*
-yarn-error.log*
-*.log
-*.min.js
