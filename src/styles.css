@@ -32,8 +32,8 @@ a.button {
   @apply border-slate-300 border px-2.5 py-1.5 rounded-md font-medium;
 }
 
-ins {
-  @apply text-slate-400 no-underline;
+b {
+  @apply text-slate-400 font-normal;
   animation: blink 500ms infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
