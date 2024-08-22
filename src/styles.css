@@ -33,7 +33,7 @@ a.button {
 }
 
 ins {
-  @apply text-slate-400;
+  @apply text-slate-400 no-underline;
   animation: blink 500ms infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
