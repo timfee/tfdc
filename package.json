@@ -5,11 +5,6 @@
     "start": "parcel serve",
     "build": "parcel build"
   },
-  "targets": {
-    "main": {
-      "optimize": false
-    }
-  },
   "devDependencies": {
     "parcel": "2.12.0",
     "postcss": "^8.4.41",
