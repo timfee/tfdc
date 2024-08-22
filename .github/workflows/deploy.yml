@@ -43,10 +43,11 @@ jobs:
     - name: Build
       run: pnpm run build
 
-    - name: Publish to Cloudflare
-      uses: cloudflare/wrangler-action@2.0.0
+    - name: Publish
+      uses: cloudflare/pages-action@v1
       with:
-        apiToken: ${{ secrets.CF_API_TOKEN }}
-        workingDirectory: 'dist'
-      env:
-        CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        apiToken: ${{ secrets.Cf_API_TOKEN }}
+        accountId: ${{ secrets.CF_ACCOUNT_ID }}
+        projectName: 'tfdc'
+        directory: 'dist'
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
