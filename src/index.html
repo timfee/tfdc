@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="subpixel-antialiased">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Tim Feeley — Product manager. Friend.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Hi, I’m Tim Feeley, a people-centric Product Manager and UX leader in New York City."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tim Feeley — Product manager. Friend." />
+    <meta
+      property="og:description"
+      content="Hi, I’m Tim Feeley, a people-centric Product Manager and UX leader in San Francisco."
+    />
+    <meta property="og:image" content="https://timfeeley.com/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Tim Feeley — Product manager. Friend."
+    />
+    <meta
+      name="twitter:description"
+      content="Hi, I’m Tim Feeley, a people-centric Product Manager and UX leader in New York City."
+    />
+    <meta name="twitter:image" content="https://timfeeley.com/og.png" />
+
+    <style type="text/css">
+      @import "./styles.css";
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cursor = document.createElement("ins");
+        cursor.textContent = "|";
+
+        function typeText(text, index = 0) {
+          if (index < text.length) {
+            h1.insertBefore(document.createTextNode(text[index]), cursor);
+            setTimeout(() => typeText(text, index + 1), 100 + index * 10);
+          }
+        }
+
+        const main = document.querySelector("main");
+
+        const h1 = document.querySelector("h1");
+        const span = h1.querySelector("span");
+        const originalText = span.textContent;
+
+        span.textContent = "";
+        span.style.display = "inline-flex";
+        main.classList.remove("opacity-0");
+
+        h1.appendChild(cursor);
+
+        setTimeout(() => typeText(originalText), 600);
+      });
+    </script>
+  </head>
+
+  <body class="bg-slate-100">
+    <main class="opacity-0 duration-1000 transition-all w-[21rem]">
+      <h1 class="text-2xl font-semibold mb-2">
+        Hello, world. <span class="invisible inline-flex">I’m Tim Feeley.</span>
+      </h1>
+      <section class="flex gap-3 items-center">
+        <a class="button bg-white" href="mailto:tim@timfeeley.com">tim@timfeeley.com </a>
+        <a
+          href="https://linkedin.com/in/timfeeley"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="linkedin.svg" alt="LinkedIn" class="size-6 p-0" />
+        </a>
+        <a
+          href="https://github.com/timfee"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="github.svg" alt="GitHub" class="size-6 p-0" />
+        </a>
+      </section>
+      <p class="mt-4 text-xs text-slate-600">Make better mistakes tomorrow.</p>
+    </main>
+  </body>
+</html>
