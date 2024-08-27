@@ -38,6 +38,7 @@ b {
 }
 
 @keyframes blink {
+
   0%,
   100% {
     opacity: 1;
@@ -46,4 +47,8 @@ b {
   50% {
     opacity: 0.3;
   }
+}
+
+section p {
+  display: none;
 }

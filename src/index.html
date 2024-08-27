@@ -5,6 +5,7 @@
 
     <title>Tim Feeley — Product manager. Friend.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://timfeeley.com" />
 
     <meta
       name="description"
@@ -46,7 +47,7 @@
         const main = document.querySelector("main");
 
         const section = document.querySelector("section");
-        const div = section.querySelector("div");
+        const div = section.querySelector("h1");
         const span = div.querySelector("span");
         const originalText = span.textContent;
 
@@ -58,7 +59,6 @@
 
         setTimeout(() => typeText(originalText), 600);
       });
-      
     </script>
   </head>
 
@@ -66,8 +66,15 @@
     <main class="opacity-0 duration-1000 transition-all w-[21rem]">
       <section
         class="text-2xl font-semibold mb-2 flex flex-col sm:flex-row sm:gap-x-2">
-        <h1>Hello, world.</h1>
-        <div><span class="invisible inline-flex">I’m Tim Feeley.</span></div>
+        <h2>Hello, world.</h2>
+        <h1><span class="invisible inline-flex">I’m Tim Feeley.</span></h1>
+        <p>
+          I’m a people-centric product manager and UX leader in San Francisco.
+        </p>
+        <p>
+          I have experience in consumer-facing products, developer tools, and AI
+          at companies like Google, Meta, Tripadvisor, Goldman Sachs and more.
+        </p>
       </section>
       <section class="flex gap-3 items-center my-4">
         <a class="button bg-white" href="mailto:tim@timfeeley.com">
